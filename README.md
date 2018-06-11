@@ -31,5 +31,5 @@ To setup the dev environment run the following commands
 
 Now you can run the app like it was an executable
 
-    $ dist/osx/ftpctl --help
+    $ dist/osx/ftpctl-darwin-x64 --help
 
