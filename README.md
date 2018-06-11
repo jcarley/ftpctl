@@ -21,9 +21,15 @@ To setup the dev environment run the following commands
 
 ### Building
 
-    $ make build
+#### For Linux
 
-Now you can run the app like it was an executable script
+    $ make build-linux
 
-    $ ftpctl --help
+#### For OSX
+
+    $ make build-osx
+
+Now you can run the app like it was an executable
+
+    $ dist/osx/ftpctl --help
 
