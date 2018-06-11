@@ -1,0 +1,18 @@
+{
+ "CN": "MY-ROOT-CA",
+ "key": {
+    "algo": "ecdsa",
+    "size": 256
+ },
+ "names": [
+ {
+    "C": "USA",
+    "L": "Wisconsin",
+    "O": "FinishFirstSoftware",
+    "OU": "Engineering"
+ }
+ ],
+ "ca": {
+    "expiry": "262800h"
+ }
+}

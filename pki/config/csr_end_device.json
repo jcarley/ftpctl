@@ -1,0 +1,16 @@
+{
+  "CN": "www.finishfirstsoftware.com",
+  "key": {
+    "algo": "ecdsa",
+    "size": 256
+  },
+  "names": [
+    {
+      "C": "USA",
+      "L": "Wisconsin",
+      "O": "FinishFirstSoftware",
+      "OU": "Engineering"
+    }
+  ],
+  "Hosts": ["www1.finishfirstsoftware.com", "www2.finishfirstsoftware.com"]
+}
