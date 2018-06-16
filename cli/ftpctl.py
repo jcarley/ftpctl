@@ -13,8 +13,9 @@ from cli.logging import info, error
 @click.pass_context
 def main(ctx, verbose):
     """
-    This is an example script to learn Click.  Use this only as an example.
-    Not meant for production use.
+    ftpctl is a command line interface for the pure-ftpd docker container.  It controls starting
+    and stopping the container, binding it to the correct IP address and setting up the volumes
+    to store user credentials and uploads.
 
     Examples:
 
