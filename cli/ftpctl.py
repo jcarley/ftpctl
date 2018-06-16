@@ -5,6 +5,8 @@ import docker
 from pathlib import Path
 from cli.start import start
 from cli.stop import stop
+from cli.adduser import adduser
+from cli.removeuser import removeuser
 from cli.logging import info, error
 
 
@@ -60,4 +62,6 @@ def init(ctx):
 
 main.add_command(start)
 main.add_command(stop)
+main.add_command(adduser)
+main.add_command(removeuser)
 
