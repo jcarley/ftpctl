@@ -2,6 +2,7 @@ import socket
 import click
 import docker
 
+from .const import CONTAINER_NAME, IMAGE_NAME
 from cli.logging import info, error
 
 @click.command()
@@ -9,8 +10,6 @@ from cli.logging import info, error
 @click.pass_context
 def start(ctx, host):
 
-    CONTAINER_NAME = 'ftpd_server'
-    IMAGE_NAME = 'stilliard/pure-ftpd:stretch-latest'
     REMOVE_ON_SHUTDOWN = True
     RUN_DETACHED = True
 
