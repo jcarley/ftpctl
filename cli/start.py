@@ -29,7 +29,8 @@ def start(ctx, host):
         error(ctx, "Please provide the ip addrss to bind to using the --host option.")
         exit()
 
-    pull(ctx)
+    if not exists(ctx):
+        pull(ctx)
 
     info(ctx, "Starting ftp-server at host {0}".format(ip))
 
@@ -45,6 +46,12 @@ def start(ctx, host):
             environment=["PUBLICHOST={0}".format(ip)],
             volumes={users_uploads: {'bind': '/home/ftpusers/', 'mode': 'rw'},
                     users_credentials: {'bind': '/etc/pure-ftpd/passwd', 'mode': 'rw'}})
+
+def exists(ctx):
+    repo, tag, separator = parse_repository_tag(IMAGE_NAME)
+    client = docker.APIClient(base_url='unix://var/run/docker.sock')
+    images = client.images(repo, quiet=True)
+    return len(images) > 0
 
 
 def pull(ctx, ignore_pull_failures=False):
