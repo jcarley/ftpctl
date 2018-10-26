@@ -16,6 +16,8 @@ build-osx:
 	@mkdir -p dist/osx
 	@mv dist/ftpctl dist/osx/ftpctl-darwin-x64
 
+build-all: build-osx build-linux
+
 run:
 	@docker run -it --rm -v ${CURRENT_DIR}:/app -v /var/run/docker.sock:/var/run/docker.sock -w /app ${PROJECT}:latest /bin/bash
 
