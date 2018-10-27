@@ -26,6 +26,8 @@ set -e
 rm -f certs/*.pem
 rm -f certs/*.csr
 
+mkdir -p certs
+
 # create the root CA
 cfssl gencert -initca config/ca_root.json | cfssljson -bare certs/root_ca
 
